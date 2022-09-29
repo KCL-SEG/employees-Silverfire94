@@ -14,7 +14,9 @@ class Employee:
 
 
     def get_pay(self):
-        return self.monthly_salary() + self.monthly_commission()
+        money = self.monthly_salary() + self.monthly_commission()
+        self.pay = ""
+        return money
 
     def monthly_salary(self):
         if self.hours:
@@ -38,6 +40,8 @@ class Employee:
 
     def __str__(self):
         total_pay = self.get_pay()
+        self.monthly_salary()
+        self.monthly_commission()
         return f"{self.pay} Their total pay is {total_pay}."
 
 
