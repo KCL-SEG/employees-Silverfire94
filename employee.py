@@ -27,13 +27,13 @@ class Employee:
     def monthly_commission(self):
         if self.commission:
             if self.contract:
-                self.pay += f" and receives a commission for {self.contract} contract(s) at {self.commission}/contract."
+                self.pay += f" and receives a commission for {self.contract} contract(s) at {self.commission}/contract. "
                 return self.commission*self.contract
             else:
-                self.pay += f" and receives a bonus commission of {self.commission}."
+                self.pay += f" and receives a bonus commission of {self.commission}. "
                 return self.commission
         else:
-            self.pay += "."
+            self.pay += ". "
             return 0
 
     def __str__(self):
